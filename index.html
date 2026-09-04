@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catálogo de muestras DKIC Auto Parts para guayas de freno de diferentes vehículos." />
+  <title>DKIC Auto Parts | Guayas de Freno</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="DKIC Auto Parts, inicio">
+      <span class="brand-mark">DKIC</span>
+      <span class="brand-caption">AUTO PARTS</span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="#productos">Productos</a>
+      <a href="#calidad">Calidad</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="intro" aria-labelledby="main-title">
+      <div class="intro-copy">
+        <p class="eyebrow">CATÁLOGO DE MUESTRAS · 2026</p>
+        <h1 id="main-title">GUAYAS<br><span>DE FRENO</span></h1>
+        <p class="intro-text">Encuentre la referencia correcta para su vehículo. Identificación rápida por modelo, año y código DKIC.</p>
+        <a class="primary-link" href="#productos">Ver catálogo <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-card" aria-label="Producto destacado, código 086691">
+        <span class="hero-label">IMAGEN DE MUESTRA</span>
+        <strong>086691</strong>
+        <span>ARAUCA 1.3 · 2011–2017</span>
+        <div class="cable-line" aria-hidden="true"><i></i></div>
+      </div>
+    </section>
+
+    <section class="catalog" id="productos" aria-labelledby="catalog-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark">CATÁLOGO</p>
+          <h2 id="catalog-title">Seleccione su vehículo</h2>
+        </div>
+        <p><span id="result-count">8</span> referencias disponibles</p>
+      </div>
+
+      <div class="catalog-tools">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <span class="sr-only">Buscar por vehículo o referencia</span>
+          <input id="search" type="search" placeholder="Buscar vehículo o referencia…" autocomplete="off" />
+        </label>
+        <div class="filters" role="group" aria-label="Filtrar por marca">
+          <button class="filter active" type="button" data-brand="all">Todos</button>
+          <button class="filter" type="button" data-brand="Chevrolet">Chevrolet</button>
+          <button class="filter" type="button" data-brand="Ford">Ford</button>
+          <button class="filter" type="button" data-brand="Daewoo / Chery">Daewoo / Chery</button>
+          <button class="filter" type="button" data-brand="Fiat">Fiat</button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="product-grid"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <strong>No encontramos esa referencia.</strong>
+        <span>Pruebe con otro vehículo, año o código DKIC.</span>
+      </div>
+    </section>
+
+    <section class="quality" id="calidad" aria-labelledby="quality-title">
+      <div>
+        <p class="eyebrow">NUESTRA PROMESA</p>
+        <h2 id="quality-title">La referencia correcta.<br>Sin perder tiempo.</h2>
+      </div>
+      <div class="quality-points">
+        <article><span>01</span><h3>Identificación precisa</h3><p>Cada producto muestra su aplicación, rango de años y número de referencia.</p></article>
+        <article><span>02</span><h3>Consulta inmediata</h3><p>Escanee el código QR de la etiqueta para acceder a la información del producto.</p></article>
+        <article><span>03</span><h3>Amplia cobertura</h3><p>Referencias para los modelos más utilizados de varias marcas automotrices.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><span class="footer-brand">DKIC</span><small>AUTO PARTS</small></div>
+    <p>Guayas de freno · Catálogo de muestras</p>
+    <p>© <span id="year"></span> DKIC Auto Parts</p>
+  </footer>
+
+  <dialog id="product-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Cerrar">×</button>
+    <div class="dialog-layout">
+      <img id="dialog-image" alt="" />
+      <div class="dialog-copy">
+        <p class="eyebrow dark" id="dialog-brand"></p>
+        <h2 id="dialog-title"></h2>
+        <dl>
+          <div><dt>Referencia DKIC</dt><dd id="dialog-code"></dd></div>
+          <div><dt>Referencia cruzada</dt><dd id="dialog-oem"></dd></div>
+          <div><dt>Aplicación</dt><dd id="dialog-years"></dd></div>
+        </dl>
+      </div>
+    </div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
