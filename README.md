@@ -4,7 +4,7 @@ Catálogo estático y adaptable a móviles, preparado para GitHub Pages.
 
 ## Publicación
 
-El sitio se publica automáticamente mediante GitHub Actions cada vez que se actualiza la rama `main`.
+El sitio se publica automáticamente mediante GitHub Pages cada vez que se actualiza la rama `main`.
 
 ## Desarrollo local
 
